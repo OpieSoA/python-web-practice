@@ -13,6 +13,17 @@ import NextHead from "next/head"
 
 
 
+export function Link_18676d7dddd67e44364335bc8be43dcd () {
+  const [ colorMode, toggleColorMode ] = useContext(ColorModeContext)
+
+
+  return (
+    <Link as={NextLink} href={`https://reflex.dev/docs/getting-started/introduction`} sx={{"border": "0.1em solid", "padding": "0.5em", "borderRadius": "0.5em", "_hover": {"color": isTrue((colorMode === "light")) ? `rgb(107,99,246)` : `rgb(179, 175, 255)`}}}>
+  {`Check out our docs!`}
+</Link>
+  )
+}
+
 export function Fragment_c4944d8b5ece4892844e987a2ddfe4ae () {
   const [ colorMode, toggleColorMode ] = useContext(ColorModeContext)
 
@@ -33,8 +44,8 @@ export function Fragment_c4944d8b5ece4892844e987a2ddfe4ae () {
 }
 
 export function Button_5cbb2952409d1e5ed6e42602daa56ec7 () {
-  const [ colorMode, toggleColorMode ] = useContext(ColorModeContext)
   const [addEvents, connectError] = useContext(EventLoopContext);
+  const [ colorMode, toggleColorMode ] = useContext(ColorModeContext)
 
   const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, colorMode, toggleColorMode])
 
@@ -42,17 +53,6 @@ export function Button_5cbb2952409d1e5ed6e42602daa56ec7 () {
     <Button onClick={on_click_9922dd3e837b9e087c86a2522c2c93f8} sx={{"float": "right"}}>
   <Fragment_c4944d8b5ece4892844e987a2ddfe4ae/>
 </Button>
-  )
-}
-
-export function Link_18676d7dddd67e44364335bc8be43dcd () {
-  const [ colorMode, toggleColorMode ] = useContext(ColorModeContext)
-
-
-  return (
-    <Link as={NextLink} href={`https://reflex.dev/docs/getting-started/introduction`} sx={{"border": "0.1em solid", "padding": "0.5em", "borderRadius": "0.5em", "_hover": {"color": isTrue((colorMode === "light")) ? `rgb(107,99,246)` : `rgb(179, 175, 255)`}}}>
-  {`Check out our docs!`}
-</Link>
   )
 }
 
